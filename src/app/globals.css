@@ -12,6 +12,8 @@
   --danger: #e05555;
   --radius: 12px;
   --nav-h: 4.55rem;
+  --font-cairo: "Cairo";
+  --font-el-messiri: "El Messiri";
   --font-display: var(--font-el-messiri);
   --font-body: var(--font-cairo);
   --shadow-brand-sm:

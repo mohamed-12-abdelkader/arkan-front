@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
-import { Cairo, El_Messiri } from "next/font/google";
+// Self-hosted fonts (bundled at build time; no Google Fonts fetch during build)
+import "@fontsource/cairo/400.css";
+import "@fontsource/cairo/500.css";
+import "@fontsource/cairo/600.css";
+import "@fontsource/cairo/700.css";
+import "@fontsource/cairo/800.css";
+import "@fontsource/el-messiri/500.css";
+import "@fontsource/el-messiri/600.css";
+import "@fontsource/el-messiri/700.css";
 import { Providers } from "@/components/Providers";
 import "./globals.css";
-
-const cairo = Cairo({
-  variable: "--font-cairo",
-  subsets: ["arabic", "latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-});
-
-const elMessiri = El_Messiri({
-  variable: "--font-el-messiri",
-  subsets: ["arabic", "latin"],
-  weight: ["500", "600", "700"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "أركان | متجر الأجهزة الإلكترونية",
@@ -32,7 +26,6 @@ export default function RootLayout({
     <html
       lang="ar"
       dir="rtl"
-      className={`${cairo.variable} ${elMessiri.variable}`}
       suppressHydrationWarning
     >
       <body className="antialiased">
