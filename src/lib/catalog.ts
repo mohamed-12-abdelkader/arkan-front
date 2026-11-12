@@ -211,7 +211,7 @@ export async function fetchPopularProducts(
     query: {
       page: query.page ?? 1,
       limit: query.limit ?? 12,
-      in_stock: query.in_stock,
+      in_stock: query.in_stock === undefined ? undefined : String(query.in_stock),
       seed: query.seed,
     },
   });
