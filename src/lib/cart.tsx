@@ -207,7 +207,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
               tax: "0.00",
               shipping: "0.00",
               total: "0.00",
-              currency: "EGP",
+              currency: "SAR",
             },
           }
         : null,

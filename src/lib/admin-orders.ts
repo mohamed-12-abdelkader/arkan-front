@@ -151,7 +151,13 @@ export async function updateOrderStatus(
   id: string | number,
   body: { status: string; note?: string },
 ) {
-  return apiRequest<AdminOrderDetail>(`/orders/${id}/status`, {
+  return apiRequest<
+    AdminOrderDetail & {
+      payment_action?: string | null;
+      /** Set when the payment provider needs manual attention (e.g. refund in the dashboard) */
+      payment_warning?: string | null;
+    }
+  >(`/orders/${id}/status`, {
     method: "PATCH",
     token,
     body,

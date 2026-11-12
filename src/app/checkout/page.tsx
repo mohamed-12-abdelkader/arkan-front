@@ -337,6 +337,8 @@ export default function CheckoutPage() {
                 <PaymentMethodPicker
                   value={paymentMethod}
                   onChange={setPaymentMethod}
+                  amount={grandTotal}
+                  phone={form.phone}
                 />
               </section>
 
@@ -462,7 +464,7 @@ export default function CheckoutPage() {
                   {submitting
                     ? "جاري إرسال الطلب..."
                     : paymentMethod === "paymob"
-                      ? "الدفع عبر Paymob"
+                      ? "الدفع بالبطاقة"
                       : paymentMethod === "tamara"
                         ? "الدفع عبر تمارا"
                         : "تأكيد الطلب"}

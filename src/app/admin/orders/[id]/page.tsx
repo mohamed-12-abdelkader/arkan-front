@@ -289,6 +289,7 @@ export default function AdminOrderDetailPage() {
       setSuccess(`تم تحديث الحالة إلى: ${statusLabel(updated.status)}`);
       setStatusNote("");
       await load();
+      if (updated.payment_warning) setError(updated.payment_warning);
     } catch (err) {
       setError(err instanceof ApiError ? err.message : "تعذر تحديث الحالة");
     } finally {

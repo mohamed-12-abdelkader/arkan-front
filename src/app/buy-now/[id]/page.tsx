@@ -358,6 +358,8 @@ function BuyNowInner() {
               <PaymentMethodPicker
                 value={paymentMethod}
                 onChange={setPaymentMethod}
+                amount={totalAfter}
+                phone={phone}
               />
 
               {error && <p className="checkout-error">{error}</p>}
@@ -369,7 +371,7 @@ function BuyNowInner() {
                 {submitting
                   ? "جاري تأكيد الطلب..."
                   : paymentMethod === "paymob"
-                    ? "الدفع عبر Paymob"
+                    ? "الدفع بالبطاقة"
                     : paymentMethod === "tamara"
                       ? "الدفع عبر تمارا"
                       : "تأكيد الشراء الآن"}

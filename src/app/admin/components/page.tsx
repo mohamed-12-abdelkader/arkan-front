@@ -38,9 +38,9 @@ function typeLabel(value: string) {
 }
 
 function money(value: string | number) {
-  return new Intl.NumberFormat("ar-EG", {
+  return new Intl.NumberFormat("ar-SA", {
     style: "currency",
-    currency: "EGP",
+    currency: "SAR",
     maximumFractionDigits: 0,
   }).format(Number(value) || 0);
 }

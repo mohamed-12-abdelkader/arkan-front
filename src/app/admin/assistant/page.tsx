@@ -296,7 +296,7 @@ export default function AdminAssistantPage() {
                 </div>
                 <div className="shrink-0 text-end text-xs text-ink-muted">
                   <p>{c.messages_count} رسالة</p>
-                  <p>{new Date(c.updated_at).toLocaleString("ar-EG")}</p>
+                  <p>{new Date(c.updated_at).toLocaleString("ar-SA")}</p>
                 </div>
               </li>
             ))}

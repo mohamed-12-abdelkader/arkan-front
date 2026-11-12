@@ -932,7 +932,7 @@ export default function AdminCouponsPage() {
                       <span>
                         {form.type === "percentage"
                           ? "نسبة الخصم % *"
-                          : "قيمة الخصم (ج.م) *"}
+                          : "قيمة الخصم (ر.س) *"}
                       </span>
                       <input
                         required

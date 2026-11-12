@@ -1,8 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
   images: {
     remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.arkan.next-edu.online",
+        pathname: "/uploads/**",
+      },
       {
         protocol: "http",
         hostname: "localhost",

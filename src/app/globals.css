@@ -4599,6 +4599,11 @@ html[dir="rtl"] .cart-drawer.is-open .cart-drawer__panel {
   background: rgba(30, 101, 152, 0.18);
 }
 
+.checkout-pay__option.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .checkout-summary {
   position: sticky;
   top: calc(var(--nav-h) + 1rem);
